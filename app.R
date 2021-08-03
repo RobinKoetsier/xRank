@@ -13,6 +13,12 @@ library(tibble)
 xRank <- readxl::read_excel("Export_TDL_NED_2021.xlsx", 
                   sheet = "Stand") 
 xRank<- add_column(xRank, Logo = xRank$Team, .after = 1)
+
+real_cols <- c("Rank","Logo","Team","P", "W", "D","L","GF","GA","GD","Pts")
+expected_cols <- c("xGF", "xGA", "xGD","xPts","xRank")
+group_column <- function(class = NULL, ...) {
+  colDef(cell = format_pct, maxWidth = 70, align = "center", class = paste("cell number", class), ...)
+}
 # Define UI for application that draws a histogram
 ui <- fluidPage(
     tags$head(
