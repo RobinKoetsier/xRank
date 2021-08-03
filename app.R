@@ -9,6 +9,7 @@
 
 library(shiny)
 library(reactable)
+library(tibble)
 xRank <- readxl::read_excel("Export_TDL_NED_2021.xlsx", 
                   sheet = "Stand") 
 xRank<- add_column(xRank, Logo = xRank$Team, .after = 1)
