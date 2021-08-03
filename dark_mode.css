@@ -1,0 +1,99 @@
+.standings {
+  font-family: Karla, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+}
+
+.title {
+  margin: 18px 0;
+  font-size: 16px;
+}
+
+.title h2 {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.standings-table {
+  margin-bottom: 20px;
+}
+
+/* Align header text to the bottom */
+  .header,
+.group-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.header {
+  border-bottom-color: #555;
+    font-size: 13px;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+/* Highlight headers when sorting */
+  .header:hover,
+.header[aria-sort="ascending"],
+.header[aria-sort="descending"] {
+  background-color: #eee;
+}
+
+.border-left {
+  border-left: 2px solid #555;
+}
+
+/* Use box-shadow to create row borders that appear behind vertical borders */
+  .cell {
+    box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.15);
+  }
+
+.group-last .cell {
+  box-shadow: inset 0 -2px 0 #555;
+}
+
+.team {
+  display: flex;
+  align-items: baseline;
+}
+
+.record {
+  margin-left: 5px;
+  color: #999;
+    font-size: 13px;
+}
+
+.team-name {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.flag {
+  margin-right: 8px;
+  height: 21px;
+  border: 1px solid #f0f0f0;
+}
+
+.group {
+  font-size: 19px;
+}
+
+.number {
+  font-family: "Fira Mono", Consolas, Monaco, monospace;
+  font-size: 16px;
+  line-height: 30px;
+  white-space: pre;
+}
+
+.spi-rating {
+  width: 20px;
+  height: 20px;
+  border: 1px solid rgba(0, 0, 0, 0.03);
+  border-radius: 50%;
+  text-align: center;
+  align-item: right;
+  margin-left: 15px;
+  #  color: #000;
+  font-size: 13px;
+  # letter-spacing: -2px;
+}
