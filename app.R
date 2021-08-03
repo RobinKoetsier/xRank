@@ -47,7 +47,8 @@ h1("Expected Points Eredivisie"),
        
 
         # Show a plot of the generated distribution
-        mainPanel( width=510,
+       # mainPanel( width=510,
+                   mainPanel( width=510,
             reactableOutput("dashboard", width = "auto", height = "auto",
                             inline = FALSE),
                   br(),
