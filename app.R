@@ -39,11 +39,9 @@ ui <- fluidPage(
 #        tags$link(rel = "stylesheet", type = "text/css", href = "dark_mode.css")
  #   ),
     # Application title
-    h2("Expected Points Eredivisie"),
-h1("Expected Points Eredivisie", font = "Helvetica Neue"),
-h2("Expected Points Eredivisie", font = "Firo Mono"),
-h3("test", font = "Helvetica Neue"),
-h3("test",font ="Fira Mono"),
+  
+h1("Expected Points Eredivisie"),
+
     # Sidebar with a slider input for number of bins 
 
        
@@ -52,6 +50,9 @@ h3("test",font ="Fira Mono"),
         mainPanel( width=510,
             reactableOutput("dashboard", width = "auto", height = "auto",
                             inline = FALSE)
+                  br(),
+                  br(),
+                  br()
             )
         )
     
