@@ -36,7 +36,7 @@ h1 {
   font-family: 'Yusei Magic', sans-serif;
 }
     body {
-       font-family: 'Roboto', sans-serif;
+       font-family: 'Yusei Magic', sans-serif;
         font-weight: 500;
         line-height: 1.1;
         color: #007523;
