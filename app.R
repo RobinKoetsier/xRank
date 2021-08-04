@@ -10,6 +10,7 @@
 library(shiny)
 library(reactable)
 library(tibble)
+library(htmltools)
 xRank <- readxl::read_excel("Export_TDL_NED_2021.xlsx", 
                             sheet = "Stand") 
 xRank<- add_column(xRank, Logo = xRank$Team, .after = 1)
@@ -61,6 +62,8 @@ ui <- fluidPage(
 
 # Define server logic required to draw a histogram
 server <- function(input, output) {
+  tags$link(href = "https://fonts.googleapis.com/css?family=Work+Sans:400,600,700&display=fallback",
+                     rel = "stylesheet")
   tags$link(href = "https://fonts.googleapis.com/css?family=Karla:400,700|Fira+Mono&display=fallback", rel = "stylesheet")
   tags$link(href = "https://fonts.googleapis.com/css2?family=Fira+Sans:wght@200&family=Roboto:wght@100&display=swap", rel = "stylesheet")
   
@@ -70,6 +73,7 @@ server <- function(input, output) {
     reactable(
       xRank,
       showSortable = TRUE,
+      style = list(fontFamily = "Work Sans, sans-serif", fontSize = "14px"),
       defaultColGroup = colGroup(headerClass = "group-header"),
       columnGroups = list(
         colGroup(name = "League Table", columns = real_cols),
