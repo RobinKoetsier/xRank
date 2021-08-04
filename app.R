@@ -29,7 +29,7 @@ ui <- fluidPage(
       h1 {
        font-family: 'Roboto', sans-serif;
         font-weight: 500;
-        line-height: 1.1;
+     
         color: #007523;
       }
 h2 {
