@@ -21,7 +21,7 @@ group_column <- function(class = NULL, ...) {
   colDef(cell = format_pct, maxWidth = 70, align = "center", class = paste("cell number", class), ...)
 }
 # Define UI for application that draws a histogram
-ui <- fluidPage(
+ui <- fluidPage(titlePanel(h1("Expected Points Eredivisie")),
   tags$head(
     tags$style(HTML("
    @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
@@ -39,7 +39,7 @@ h2 {
        font-family: 'Roboto', sans-serif;
         font-weight: 500;
        
-        color: #007523;
+       
       }
     "))
   ),
@@ -49,7 +49,7 @@ h2 {
   #   ),
   # Application title
   
-  h1("Expected Points Eredivisie"),
+  
   
   # Sidebar with a slider input for number of bins 
   
