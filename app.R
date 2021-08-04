@@ -32,7 +32,9 @@ ui <- fluidPage(
         line-height: 1.1;
         color: #48ca3b;
       }
-
+* {
+  font-family: 'Yusei Magic', sans-serif;
+}
     "))
   ),
   includeCSS("www/dark_mode.css"),
