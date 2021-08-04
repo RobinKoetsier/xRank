@@ -35,7 +35,6 @@ ui <- fluidPage( e
 
     "))
   ),
-                
   includeCSS("www/dark_mode.css"),
   # tags$head(
   #        tags$link(rel = "stylesheet", type = "text/css", href = "dark_mode.css")
@@ -66,7 +65,7 @@ ui <- fluidPage( e
 server <- function(input, output) {
   tags$link(href = "https://fonts.googleapis.com/css?family=Karla:400,700|Fira+Mono&display=fallback", rel = "stylesheet")
   tags$link(href = "https://fonts.googleapis.com/css2?family=Fira+Sans:wght@200&family=Roboto:wght@100&display=swap", rel = "stylesheet")
- 
+  
   
   
   output$dashboard <- renderReactable({
@@ -74,7 +73,7 @@ server <- function(input, output) {
       xRank,
       showSortable = TRUE,
       defaultColGroup = colGroup(headerClass = "group-header"),
-    #  style = list(fontFamily = "Work Sans, sans-serif", fontSize = "14px"),
+     
       columnGroups = list(
         colGroup(name = "League Table", columns = real_cols),
         colGroup(name = "Expected", columns = expected_cols)),
