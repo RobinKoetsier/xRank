@@ -13,8 +13,7 @@ library(tibble)
 xRank <- readxl::read_excel("Export_TDL_NED_2021.xlsx", 
                             sheet = "Stand") 
 xRank<- add_column(xRank, Logo = xRank$Team, .after = 1)
-tags$link(href = "https://fonts.googleapis.com/css?family=Work+Sans:400,600,700&display=fallback",
-                     rel = "stylesheet")
+
 real_cols <- c("Rank","Logo","Team","P", "W", "D","L","GF","GA","GD","Pts")
 expected_cols <- c("xGF", "xGA", "xGD","xPts","xRank")
 group_column <- function(class = NULL, ...) {
@@ -67,7 +66,8 @@ ui <- fluidPage( e
 server <- function(input, output) {
   tags$link(href = "https://fonts.googleapis.com/css?family=Karla:400,700|Fira+Mono&display=fallback", rel = "stylesheet")
   tags$link(href = "https://fonts.googleapis.com/css2?family=Fira+Sans:wght@200&family=Roboto:wght@100&display=swap", rel = "stylesheet")
-  
+  tags$link(href = "https://fonts.googleapis.com/css?family=Work+Sans:400,600,700&display=fallback",
+                     rel = "stylesheet")
   
   
   output$dashboard <- renderReactable({
