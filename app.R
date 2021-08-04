@@ -24,9 +24,15 @@ ui <- fluidPage(
   tags$head(
     tags$style(HTML("
    @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap');
-      
+     @import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@200&family=Roboto:wght@100&display=swap');
       h1 {
        font-family: 'Roboto', sans-serif;
+        font-weight: 500;
+        line-height: 1.1;
+        color: #48ca3b;
+      }
+ h2 {
+       font-family: 'Fira', sans-serif;
         font-weight: 500;
         line-height: 1.1;
         color: #48ca3b;
@@ -41,6 +47,7 @@ ui <- fluidPage(
   # Application title
   
   h1("Expected Points Eredivisie"),
+ h2("Expected Points Eredivisie"),
   
   # Sidebar with a slider input for number of bins 
   
@@ -71,7 +78,7 @@ server <- function(input, output) {
       xRank,
       showSortable = TRUE,
       defaultColGroup = colGroup(headerClass = "group-header"),
-      style = list(fontFamily = "Fira"),
+     
       columnGroups = list(
         colGroup(name = "League Table", columns = real_cols),
         colGroup(name = "Expected", columns = expected_cols)),
