@@ -21,18 +21,18 @@ group_column <- function(class = NULL, ...) {
   colDef(cell = format_pct, maxWidth = 70, align = "center", class = paste("cell number", class), ...)
 }
 # Define UI for application that draws a histogram
-ui <- fluidPage(titlePanel(h1("Expected Points Eredivisie")),
+ui <- fluidPage(titlePanel("Expected Points Eredivisie"),
   tags$head(
     tags$style(HTML("
    @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
       @import url('https://fonts.googleapis.com/css2?family=Yusei+Magic&display=swap');
-      h1 {
+      h2 { 
        font-family: 'Roboto', sans-serif;
         font-weight: 500;
      
         color: #007523;
       }
-h2 {
+h1 {
   font-family: 'Yusei Magic', sans-serif;
 }
     body {
