@@ -87,7 +87,7 @@ server <- function(input, output) {
                         )
                       }),
         Team= colDef(minWidth = 140,
-                     class = "cell", 
+                   
                      align = "left",
         ),
         xRank = colDef(minWidth = 50,
