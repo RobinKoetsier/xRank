@@ -26,17 +26,17 @@ ui <- fluidPage(
     tags$style(HTML("
    @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap');
       @import url('https://fonts.googleapis.com/css2?family=Yusei+Magic&display=swap');
-      h2 {
+      h1 {
        font-family: 'Roboto', sans-serif;
         font-weight: 500;
         line-height: 1.1;
         color: #007523;
       }
-h1 {
+h2 {
   font-family: 'Yusei Magic', sans-serif;
 }
     body {
-       font-family: 'Yusei Magic', sans-serif;
+       font-family: 'Roboto', sans-serif;
         font-weight: 500;
         line-height: 1.1;
         color: #007523;
