@@ -13,7 +13,8 @@ library(tibble)
 xRank <- readxl::read_excel("Export_TDL_NED_2021.xlsx", 
                             sheet = "Stand") 
 xRank<- add_column(xRank, Logo = xRank$Team, .after = 1)
-
+tags$link(href = "https://fonts.googleapis.com/css?family=Work+Sans:400,600,700&display=fallback",
+                     rel = "stylesheet")
 real_cols <- c("Rank","Logo","Team","P", "W", "D","L","GF","GA","GD","Pts")
 expected_cols <- c("xGF", "xGA", "xGD","xPts","xRank")
 group_column <- function(class = NULL, ...) {
@@ -35,6 +36,7 @@ ui <- fluidPage( e
 
     "))
   ),
+                
   includeCSS("www/dark_mode.css"),
   # tags$head(
   #        tags$link(rel = "stylesheet", type = "text/css", href = "dark_mode.css")
