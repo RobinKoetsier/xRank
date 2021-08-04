@@ -71,6 +71,7 @@ server <- function(input, output) {
       xRank,
       showSortable = TRUE,
       defaultColGroup = colGroup(headerClass = "group-header"),
+      fontFamily = "Roboto",
       columnGroups = list(
         colGroup(name = "League Table", columns = real_cols),
         colGroup(name = "Expected", columns = expected_cols)),
