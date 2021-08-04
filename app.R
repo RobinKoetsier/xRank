@@ -73,7 +73,7 @@ server <- function(input, output) {
     reactable(
       xRank,
       showSortable = TRUE,
-      style = list(fontFamily = "Work Sans, sans-serif", fontSize = "14px"),
+    # style = list(fontFamily = "Work Sans, sans-serif", fontSize = "14px"),
       defaultColGroup = colGroup(headerClass = "group-header"),
       columnGroups = list(
         colGroup(name = "League Table", columns = real_cols),
