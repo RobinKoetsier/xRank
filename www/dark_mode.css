@@ -64,6 +64,7 @@
 }
 
 .team-name {
+    font-family: 'Roboto', sans-serif;
   font-size: 18px;
   font-weight: 700;
 }
@@ -86,6 +87,7 @@
 }
 
 .spi-rating {
+  font-family: 'Roboto', sans-serif;
   width: 20px;
   height: 20px;
   border: 1px solid rgba(0, 0, 0, 0.03);
