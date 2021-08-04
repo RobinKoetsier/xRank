@@ -20,7 +20,7 @@ group_column <- function(class = NULL, ...) {
   colDef(cell = format_pct, maxWidth = 70, align = "center", class = paste("cell number", class), ...)
 }
 # Define UI for application that draws a histogram
-ui <- fluidPage( 
+ui <- fluidPage( e
   #titlePanel("Hello Shiny!"),
   tags$head(
     tags$style(HTML("
