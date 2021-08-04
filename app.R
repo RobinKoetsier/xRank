@@ -42,7 +42,7 @@ ui <- fluidPage( e
   # Application title
   
   h1("Expected Points Eredivisie"),
- h2("Expected Points Eredivisie"),
+ #h2("Expected Points Eredivisie"),
   
   # Sidebar with a slider input for number of bins 
   
