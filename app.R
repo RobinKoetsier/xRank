@@ -20,12 +20,11 @@ group_column <- function(class = NULL, ...) {
   colDef(cell = format_pct, maxWidth = 70, align = "center", class = paste("cell number", class), ...)
 }
 # Define UI for application that draws a histogram
-ui <- fluidPage( e
-  #titlePanel("Hello Shiny!"),
+ui <- fluidPage(
   tags$head(
     tags$style(HTML("
    @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap');
-     @import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@200&family=Roboto:wght@100&display=swap');
+      
       h1 {
        font-family: 'Roboto', sans-serif;
         font-weight: 500;
@@ -42,7 +41,6 @@ ui <- fluidPage( e
   # Application title
   
   h1("Expected Points Eredivisie"),
- #h2("Expected Points Eredivisie"),
   
   # Sidebar with a slider input for number of bins 
   
@@ -73,7 +71,6 @@ server <- function(input, output) {
       xRank,
       showSortable = TRUE,
       defaultColGroup = colGroup(headerClass = "group-header"),
-     
       columnGroups = list(
         colGroup(name = "League Table", columns = real_cols),
         colGroup(name = "Expected", columns = expected_cols)),
@@ -88,7 +85,7 @@ server <- function(input, output) {
                         )
                       }),
         Team= colDef(minWidth = 140,
-                   
+                     
                      align = "left",
         ),
         xRank = colDef(minWidth = 50,
