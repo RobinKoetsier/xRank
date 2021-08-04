@@ -67,8 +67,7 @@ ui <- fluidPage( e
 server <- function(input, output) {
   tags$link(href = "https://fonts.googleapis.com/css?family=Karla:400,700|Fira+Mono&display=fallback", rel = "stylesheet")
   tags$link(href = "https://fonts.googleapis.com/css2?family=Fira+Sans:wght@200&family=Roboto:wght@100&display=swap", rel = "stylesheet")
-  tags$link(href = "https://fonts.googleapis.com/css?family=Work+Sans:400,600,700&display=fallback",
-                     rel = "stylesheet")
+  
   
   
   output$dashboard <- renderReactable({
