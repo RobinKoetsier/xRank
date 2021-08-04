@@ -30,12 +30,6 @@ ui <- fluidPage(
         font-weight: 500;
         line-height: 1.1;
         color: #48ca3b;
-      },
- h2 {
-       font-family: 'Fira', sans-serif;
-        font-weight: 500;
-        line-height: 1.1;
-        color: #48ca3b;
       }
 
     "))
