@@ -24,7 +24,7 @@ group_column <- function(class = NULL, ...) {
 ui <- fluidPage(
   tags$head(
     tags$style(HTML("
-   @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap');
+   @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
       @import url('https://fonts.googleapis.com/css2?family=Yusei+Magic&display=swap');
       h1 {
        font-family: 'Roboto', sans-serif;
@@ -38,7 +38,7 @@ h2 {
     body {
        font-family: 'Roboto', sans-serif;
         font-weight: 500;
-        line-height: 1.1;
+       
         color: #007523;
       }
     "))
@@ -70,9 +70,9 @@ h2 {
 
 # Define server logic required to draw a histogram
 server <- function(input, output) {
-
-  tags$link(href = "https://fonts.googleapis.com/css?family=Karla:400,700|Fira+Mono&display=fallback", rel = "stylesheet")
-  tags$link(href = "https://fonts.googleapis.com/css2?family=Fira+Sans:wght@200&family=Roboto:wght@100&display=swap", rel = "stylesheet")
+  
+#  tags$link(href = "https://fonts.googleapis.com/css?family=Karla:400,700|Fira+Mono&display=fallback", rel = "stylesheet")
+#  tags$link(href = "https://fonts.googleapis.com/css2?family=Roboto&display=swap", rel = "stylesheet")
   
   
   
@@ -80,7 +80,7 @@ server <- function(input, output) {
     reactable(
       xRank,
       showSortable = TRUE,
-   
+      
       defaultColGroup = colGroup(headerClass = "group-header"),
       columnGroups = list(
         colGroup(name = "League Table", columns = real_cols),
@@ -160,7 +160,7 @@ server <- function(input, output) {
       )
     )
   })
- 
+  
 }
 
 # Run the application 
