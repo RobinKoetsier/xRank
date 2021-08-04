@@ -71,7 +71,7 @@ server <- function(input, output) {
   
   
   output$dashboard <- renderReactable({
-    tbl <- reactable(
+    reactable(
       xRank,
       showSortable = TRUE,
    
@@ -154,14 +154,7 @@ server <- function(input, output) {
       )
     )
   })
-  div(class = "standings",
-  div(class = "title",
-    h2("2019 Women's World Cup Predictions"),
-    "Soccer Power Index (SPI) ratings and chances of advancing for every team"
-  ),
-  tbl,
-  "Forecast from before 3rd group matches"
-)
+ 
 }
 
 # Run the application 
