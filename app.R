@@ -26,7 +26,7 @@ ui <- fluidPage(titlePanel("Expected Points Eredivisie"),
     tags$style(HTML("
    @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
       @import url('https://fonts.googleapis.com/css2?family=Yusei+Magic&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@500&display=swap');
 
       h2 { 
        font-family: 'Roboto', sans-serif;
@@ -39,7 +39,7 @@ h1 {
 }
     body {
        font-family: 'Spartan', sans-serif;
-        font-weight: 500;
+   
        
        
       }
