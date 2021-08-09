@@ -11,9 +11,11 @@ library(shiny)
 library(reactable)
 library(tibble)
 library(htmltools)
+library(magrittr)
 xRank <- readxl::read_excel("Export_TDL_NED_2021.xlsx", 
                             sheet = "Stand") 
 xRank<- add_column(xRank, Logo = xRank$Team, .after = 1)
+
 
 real_cols <- c("Rank","Logo","Team","P", "W", "D","L","GF","GA","GD","Pts")
 expected_cols <- c("xGF", "xGA", "xGD","xPts","xRank")
@@ -25,10 +27,7 @@ ui <- fluidPage(titlePanel("Expected Points Eredivisie"),
   tags$head(
     tags$style(HTML("
    @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
-      @import url('https://fonts.googleapis.com/css2?family=Yusei+Magic&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@500&display=swap');
-
-      h2 { 
+     
        font-family: 'Roboto', sans-serif;
         font-weight: 500;
      
@@ -38,8 +37,8 @@ h1 {
   font-family: 'Yusei Magic', sans-serif;
 }
     body {
-       font-family: 'Spartan', sans-serif;
-   
+       font-family: 'Roboto', sans-serif;
+        font-weight: 500;
        
        
       }
@@ -62,6 +61,7 @@ h1 {
   mainPanel( width=510,
              reactableOutput("dashboard", width = "auto", height = "auto",
                              inline = FALSE),
+            
              br(),
              br(),
              br()
@@ -82,7 +82,7 @@ server <- function(input, output) {
     reactable(
       xRank,
       showSortable = TRUE,
-      
+      width = 1030,
       defaultColGroup = colGroup(headerClass = "group-header"),
       columnGroups = list(
         colGroup(name = "League Table", columns = real_cols),
@@ -101,7 +101,7 @@ server <- function(input, output) {
                      
                      align = "left",
         ),
-        xRank = colDef(minWidth = 50,
+        xRank = colDef(minWidth = 60,
                        align = "center",
                        cell = function(value,index){
                          if(xRank$xRank[index] < xRank$Rank[index]){
