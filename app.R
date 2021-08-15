@@ -12,7 +12,7 @@ library(reactable)
 library(tibble)
 library(htmltools)
 library(magrittr)
-xRank <- readxl::read_excel("Export_TDL_NED_2021.xlsx", 
+xRank <- readxl::read_excel("Export_TDL_NED_2122.xlsx", 
                             sheet = "Stand") 
 xRank<- add_column(xRank, Logo = xRank$Team, .after = 1)
 
